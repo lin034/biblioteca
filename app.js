@@ -1,14 +1,11 @@
 const express= require('express')
 const app= express()
+const path= require('path')
 
 
 const puerto= 3000
 
-app.get('/',(req,res)=>{
-    res.send('ola lin')
-})
-
-
+app.use(require(path.join(__dirname,'./index.ruta')))
 
 
 app.listen(puerto,()=>{
